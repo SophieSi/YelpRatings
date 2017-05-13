@@ -1,0 +1,63 @@
+/* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+
+
+#map_canvas, #info-container {
+    height: 600px;
+    /*width: 600px;*/
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #2C3E50;
+}
+#map {
+    height: 100%;
+    color: #2C3E50;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    /*width: 80%;*/
+    margin: 0;
+    padding: 0;
+    /*background-color: rgba(0, 0, 0, 0.25);*/
+    background-color: rgb(241, 239, 233);
+    /*background-color: #dddddd;*/
+    pointer-events: auto;
+
+}
+
+#info-container{
+    /*background-color: rgb(241, 239, 233);*/
+}
+.btn_margin{
+    margin-top: 20px;
+    margin-left: 100px;
+    top:0;right:0;
+}
+.lines{
+    clip-path: url(#clip);
+}
+
+.dot_canvas {
+    clip-path: url(#clip);
+}
+.fill {
+    fill: rgb(0, 0, 255);
+    opacity: 0.2;
+    clip-path: url(#clip);
+}
+
+.zoom {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+}
+
+.dot {
+    stroke: #293b47;
+    fill: #7A99AC
+}
+
+text{
+   color:#2c3e50;
+}
