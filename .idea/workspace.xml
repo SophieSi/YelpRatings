@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f735b513-f69e-4018-919e-2ad70b56ecb9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/details/chinese/csv/_j2EtQtgLuXGRBfbM5YwZA.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/details/chinese/json/_j2EtQtgLuXGRBfbM5YwZA.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/load_data.js" afterPath="$PROJECT_DIR$/js/load_data.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -39,9 +37,11 @@
       <file leaf-file-name="load_data.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/load_data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="127">
+              <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+              <folding>
+                <element signature="e#1116#2738#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -361,12 +361,12 @@
       <updated>1494882712243</updated>
       <workItem from="1494882713448" duration="916000" />
       <workItem from="1494973799043" duration="15630000" />
-      <workItem from="1495371929009" duration="8085000" />
+      <workItem from="1495371929009" duration="8255000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24631000" />
+    <option name="totallyTimeSpent" value="24801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1436" height="877" extended-state="6" />
@@ -398,7 +398,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -421,7 +423,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1116#2738#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -498,7 +502,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="e#1116#2738#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -629,9 +635,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/load_data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="127">
+          <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+          <folding>
+            <element signature="e#1116#2738#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
