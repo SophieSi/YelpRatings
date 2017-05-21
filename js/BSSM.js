@@ -55,30 +55,18 @@ BSSM.prototype.initVis = function(){
     vis.focus = vis.svg
         .append("g")
         .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
-    //
-    // vis.context = vis.svg.append("g")
-    //     .attr("transform", "translate(" + vis.margin2.left + "," + vis.margin2.top + ")");
 
-    // originDomain = d3.extent(vis.displayData,function (d) {
-    //     return d.date_week;
-    // });
 
     // axis and scales
     vis.x = d3.scaleTime()
         .domain(d3.extent(vis.date_week))
         .range([0, vis.width]);
 
-    // vis.x2 = d3.scaleTime()
-    //     .domain(vis.x.domain())
-    //     .range([0, vis.width]);
 
     vis.y = d3.scaleLinear()
         .domain([0,5])
         .range([vis.height, 0]);
 
-    // vis.y2 = d3.scaleLinear()
-    //     .domain([0,5])
-    //     .range([vis.height2, 0]);
 
     vis.z = d3.scaleOrdinal([d3.rgb(0, 0, 255),'#e80d2e',d3.rgb(0,204,102)]);
     vis.z.domain(vis.stars.map(function(s) { return s.id; }));
@@ -86,14 +74,6 @@ BSSM.prototype.initVis = function(){
 
     vis.yAxis = d3.axisLeft(vis.y)
         .ticks(5);
-    // vis.xAxis2 = d3.axisBottom(vis.x2);
-    // vis.yAxis2 = d3.axisLeft(vis.y2);
-
-    //brush
-    // vis.brush = d3.brushX()
-    //     .extent([[0, 0], [vis.width, vis.height2]])
-    //     // .x(vis.x2);
-    //     .on("brush end", brushed);
 
     //zoom
     vis.zoom = d3.zoom()

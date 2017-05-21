@@ -1,6 +1,20 @@
 /* Always set the map height explicitly to define the size of the div
          * element that contains the map. */
 
+a {
+    color: white;
+}
+
+a:hover {
+    color: hotpink;
+    cursor: pointer;
+}
+
+#info span:hover {
+    color: red;
+    cursor: pointer;
+}
+
 
 #map_canvas, #info-container {
     height: 600px;
@@ -13,7 +27,11 @@
     height: 100%;
     color: #2C3E50;
 }
-/* Optional: Makes the sample page fill the window. */
+
+#info h1, h2, h3, h4, h5, h6 {
+    text-transform: none;
+}
+    /* Optional: Makes the sample page fill the window. */
 html, body {
     height: 100%;
     /*width: 80%;*/
@@ -33,6 +51,14 @@ html, body {
     margin-top: 20px;
     margin-left: 100px;
     top:0;right:0;
+}
+
+#add_btn_place{
+    margin-left: 0px;
+}
+
+#comp_btn {
+    margin-left: 0px;
 }
 .lines{
     clip-path: url(#clip);

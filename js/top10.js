@@ -73,7 +73,7 @@ top10.prototype.updateVis = function(_data) {
         .append("text")
         .attr("fill", "#000")
         .attr("dy", function (d,i) {
-            return i * 2.5 + "em"
+            return i * 2 + "em"
         } )
         .attr("text-anchor", "left")
         .text(function (d,i) {

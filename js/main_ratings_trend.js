@@ -35,12 +35,12 @@ queue()
     .defer(d3.json,"data/top10/em_star_top10_200_mx.json")
     .defer(d3.json,"data/top10/em_star_top10_200_ch.json")
     .defer(d3.json,"data/top10/em_star_top10_200_jp.json")
-    .await(createVis);
+    .await(createTrend);
 
-function createVis(error, _data1, _data2, _data3,_data4,_data5,_data6, _data7, _data8,_data9,_data10) {//customize
-    full_data = [_data1, _data2,_data3,_data4,_data5]; //customize
+function createTrend(error, _data1, _data2, _data3,_data4,_data5,_data6, _data7, _data8,_data9,_data10) {//customize
+    full_data = [_data1, _data2,_data3, _data4, _data5]; //customize
     top10_data = [_data6, _data7, _data8,_data9,_data10]; //top 10 data
-    console.log(top10_data[0]);
+    // console.log(top10_data[0]);
 
     //initialize min date and max date for slider extent
     var date_min = full_data.map(function (d) {
@@ -50,7 +50,6 @@ function createVis(error, _data1, _data2, _data3,_data4,_data5,_data6, _data7, _
         return null
     });
 
-    // console.log(full_data[0]);
     //initialize scatterplots
     full_data.forEach(function (d,i) {
         len[i] = d.length;
@@ -68,6 +67,7 @@ function createVis(error, _data1, _data2, _data3,_data4,_data5,_data6, _data7, _
     })
 
     date_week_full = date_week[0] //now just use the all restaurants, may need further work
+    // console.log(date_week_full);
     slider = new Slider("slider", [d3.min(date_min),d3.max(date_max)]);
 
     // if (slider != undefined) {
@@ -134,7 +134,7 @@ function play() {
             // console.log(selectedData);
             selectedData.forEach(function (d,i) {
 
-                console.log(d);
+                // console.log(d);
                 if (d == undefined) {
 
                     newData[i] = [];

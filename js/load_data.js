@@ -24,7 +24,11 @@ var type_dict = {
 var markers = [];
 
 function loadData(_type) {
-    // console.log(_type);
+
+    //initiate add button
+
+    // document.getElementById('comp_btn').onclick = compare_test(CompareInfo, CompareData);
+
     deleteMarkers();
     info = [];
     data = [];
@@ -74,7 +78,11 @@ function loadData(_type) {
                         })
 
 
-                        if (++cbExecuted === itemsAmount) initMap(ids,info,data, colorScale);
+                        if (++cbExecuted === itemsAmount) {
+                            initMap(ids,info,data, colorScale);
+                            // compare_test(data);
+                        };
+
                     })
                 })
             });

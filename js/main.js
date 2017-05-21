@@ -7,6 +7,10 @@
 
 var BSSM_LineChart,BSSM_LineChart_Bottom ;
 
+
+
+
+
 function createVis(_id,_info ,_data) {
 
     // console.log(_info);
@@ -15,14 +19,44 @@ function createVis(_id,_info ,_data) {
     // var div = document.createElement("div");
     // div.setAttribute("id","div" + _id);
 
-    //button
-    var myButton = document.createElement("input");
-    myButton.type = "button";
-    myButton.value = "Close";
-    myButton.setAttribute("class", "btn btn-default btn_margin");
-    myButton.setAttribute("id", "btn" + _id);
-    var placeHolder = document.getElementById("cls_btn");
-    placeHolder.appendChild(myButton);
+
+// <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+
+    //close button
+    // var myButton = document.createElement("input");
+    // myButton.type = "button";
+    // myButton.value = "Close";
+    // myButton.setAttribute("class", "btn btn-default btn_margin");
+    // myButton.setAttribute("id", "closebtn");
+    // var placeHolder = document.getElementById("cls_btn");
+    // placeHolder.appendChild(myButton);
+
+
+    //add button
+    var addButton = document.createElement("input");
+    addButton.type = "button";
+    addButton.value = "Add";
+    addButton.setAttribute("class", "btn btn-default btn_margin");
+    addButton.setAttribute("id", "addbtn");
+    var placeHolder = document.getElementById("add_btn_place");
+    placeHolder.appendChild(addButton);
+
+
+    //close icon
+    var clsButton = document.createElement("span");
+    clsButton.setAttribute("class", "glyphicon glyphicon-remove");
+    clsButton.setAttribute("aria-hidden", "true");
+    var placeHolder = document.getElementById("cls_btn_place");
+    placeHolder.appendChild(clsButton);
+
+
+
+
+
+
+
+
+
 
     // var div = document.createElement('div');
     // div.setAttribute("id",_id);
@@ -32,7 +66,7 @@ function createVis(_id,_info ,_data) {
 
     document.getElementById('res_name').innerHTML = _info.name;
     document.getElementById('res_cum_star').innerHTML = "Cumulative Rating: " + _info.cum_star.toFixed(2);
-    document.getElementById('res_em_star').innerHTML = "Rating This Week: " + _info.em_star.toFixed(2);
+    document.getElementById('res_em_star').innerHTML = "Most Recent Weekly Rating: " + _info.em_star.toFixed(2);
 
 
     //visualization
@@ -45,7 +79,7 @@ function createVis(_id,_info ,_data) {
     // airlines_cmp.list = selected_airlines;
     // airlines_cmp.updateVis();
 
-    myButton.onclick=function() {
+    clsButton.onclick = function() {
         console.log(this.id);
         // var airline = this.value;
         //console.log(airline);
@@ -57,12 +91,20 @@ function createVis(_id,_info ,_data) {
         $( "#res_cum_star" ).empty();
         $( "#res_em_star" ).empty();
         $(this).remove();
+        $("#addbtn").remove();
 
         // d3.selectAll(".eachplane").remove();
         //draw new
         // airlines_cmp.list = selected_airlines;
         // airlines_cmp.updateVis();
     };
+
+
+    addButton.onclick = function () {
+        CompareInfo.push(_info);
+        CompareData.push(_data);
+        console.log(CompareInfo);
+    }
 
 
 
@@ -72,12 +114,12 @@ function createVis(_id,_info ,_data) {
 
 }
 
-var MyEventHandler = {};
-$(MyEventHandler).bind("selectionChanged", function(event,rangeStart, rangeEnd){
-    //console.log(rangeStart, rangeEnd);
-    // agevis.onSelectionChange(rangeStart, rangeEnd);
-    BSSM_LineChart_Bottom.onSelectionChange(rangeStart, rangeEnd);
-});
+// var MyEventHandler = {};
+// $(MyEventHandler).bind("selectionChanged", function(event,rangeStart, rangeEnd){
+//     //console.log(rangeStart, rangeEnd);
+//     // agevis.onSelectionChange(rangeStart, rangeEnd);
+//     BSSM_LineChart_Bottom.onSelectionChange(rangeStart, rangeEnd);
+// });
 
 
 function brushed(){

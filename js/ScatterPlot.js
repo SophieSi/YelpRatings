@@ -1,4 +1,4 @@
-/**
+    /**
  * Created by sophiasi on 5/6/17.
  */
 ScatterPlot = function(_parentElement, _title){

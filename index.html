@@ -99,14 +99,28 @@
             </div>
 
             <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default" aria-label="play" onclick="play()">
+                            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" aria-label="pause" onclick="stop()">
+                            <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
 
 
-                <div class="col-xs-1 col-md-1">
+                <div class="col-xs-2 col-md-2">
 
                 </div>
 
 
-                <div class="col-xs-10 col-md-11" id = "scatter_canvas">
+                <div class="col-xs-10 col-md-10" id = "scatter_canvas">
 
 
                     <div class="row">
@@ -132,10 +146,10 @@
                             <div id="jp_res"></div>
                         </div>
 
-                        <div class="col-xs-2 col-md-1">
-                            <button type="button" class="btn btn-primary btn-sm" onclick="play()">Play</button>
-                            <button type="button" class="btn btn-primary btn-sm" onclick="stop()">Stop</button>
-                        </div>
+                        <!--<div class="col-xs-2 col-md-1">-->
+                            <!--<button type="button" class="btn btn-primary btn-sm" onclick="play()">Play</button>-->
+                            <!--<button type="button" class="btn btn-primary btn-sm" onclick="stop()">Stop</button>-->
+                        <!--</div>-->
 
 
                     </div>
@@ -145,16 +159,14 @@
 
                         <!--</div>-->
 
-                        <div class="col-xs-8 col-md-8">
+                        <div class="col-xs-10 col-md-10">
                             <div id="slider"></div>
                         </div>
 
 
-                        <div class="col-xs-1 col-md-1">
-
-                        </div>
-
                     </div>
+
+                    <!--<div class="row text-center" style="font-size: 25px; text-anchor: middle"> Top 10 Rankings</div>-->
 
                     <div class="row">
                         <div class="col-xs-2 col-md-2">
@@ -182,10 +194,9 @@
                 </div>
 
 
-                <!--<div class="col-xs-1 col-md-1 ">-->
-                    <!---->
+                <div class="col-xs-1 col-md-1 ">
 
-                <!--</div>-->
+                </div>
 
             </div>
         </div>
@@ -201,32 +212,44 @@
                 </div>
             </div>
 
-        <div class="row">
-            <div class="col-xs-12 col-md-6" id = "map_canvas">
-                <div id="map"></div>
-            </div>
+            <div class="row">
+                <div class="col-xs-6 col-md-6" id = "map_canvas">
+                    <div id="map"></div>
+                </div>
 
-            <div class="col-xs-5 col-md-6" id = "info-container">
-                <div id = "info" class="row ">
-                    <div class="col-xs-8 col-md-8 ">
-                        <h2 id = "res_name"></h2>
-                        <h5 id = "res_cum_star"></h5>
-                        <h5 id = "res_em_star"></h5>
+                <div class="col-xs-6 col-md-6" id = "info-container">
+
+                    <div class="row" style="display: -webkit-inline-box">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true" style="color: #ffeb3b;"> </span> Top 10
+                        <input id = "comp_btn" value = "Compare" class="btn btn-default" onclick="compare_test(CompareInfo, CompareData)"></input>
                     </div>
-                    <div id = "cls_btn" class="col-xs-4 col-md-4">
+
+                    <div id = "info" class="row">
+                        <div class="col-xs-9 col-md-9">
+
+                            <div class = "row" id = "add_btn_place" style="display: -webkit-inline-box">
+                                <h3 id = "res_name"></h3>
+                            </div>
+                            <h6 id = "res_cum_star"></h6>
+                            <h6 id = "res_em_star"></h6>
+                        </div>
+
+                        <div id = "cls_btn_place" class="col-xs-1 col-md-1">
+                        </div>
+
                     </div>
-                </div>
-                <div class="row">
-                    <div id="BSSM"></div>
+                    <div class="row">
+                        <div id="BSSM"></div>
+                    </div>
+
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <div class="container">
+        <<div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Compare Quality of Restaurants</h2>
@@ -234,61 +257,67 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
 
+                <div class="col-xs-12 col-md-2"></div>
+
+                <div class="col-xs-12 col-md-10">
+
+                    <div id="compare"></div>
 
                 </div>
+
+
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+<!-- Footer -->
     <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>3481 Melrose Place
-                            <br>Beverly Hills, CA 90210</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-dribbble"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-                    </div>
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <h3>Location</h3>
+                    <p>Harvard University
+                        <br>Cambridge, MA 02138</p>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Contact</h3>
+                    <ul class="list-inline">
+                        <li>
+                            <a href=https://www.facebook.com/profile.php?id=100012810574600" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/SophieSi" class="btn-social btn-outline"><span class="sr-only">Github</span><i class="fa fa-github fa-fw"></i></a>
+                        </li>
+                        <!--<li>-->
+                        <!--<a href="#" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>-->
+                        <!--</li>-->
+                        <li>
+                            <a href="https://www.linkedin.com/in/xu-sophie-si-85896212a" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
+                        </li>
+                        <!--<li>-->
+                        <!--<a href="#" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-dribbble"></i></a>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>About Me</h3>
+                    <p> Check out my <a href="https://sophiesi.github.io/">personal website</a>.</p>
                 </div>
             </div>
         </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Your Website 2016
-                    </div>
+    </div>
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright &copy; SophieSi 2016
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
@@ -297,229 +326,9 @@
         </a>
     </div>
 
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button id="btnSubmit" type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -548,17 +357,22 @@
 
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/require.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/BSSM.js"></script>
-    <script src="js/TimeLine.js"></script>
     <script src="js/load_data.js"></script>
     <script src="js/createMap.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/Compare.js"></script>
+    <script src="js/compare_test.js"></script>
+    <script src="js/BSSM.js"></script>
+    <script src="js/TimeLine.js"></script>
+
     <!--<script async defer-->
             <!--src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgFwkRCMzl8PYEgx7t9tgV0zm8QENIzMo&libraries=visualization&callback=loadData&region=US">-->
     <!--</script>-->
+
+
+
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgFwkRCMzl8PYEgx7t9tgV0zm8QENIzMo&libraries=visualization&region=US">
     </script>
