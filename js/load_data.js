@@ -34,7 +34,7 @@ function loadData(_type) {
     data = [];
     if (data.length == 0 && info.length == 0 ) {
         document.getElementById("about").scrollIntoView()
-        d3.json('data/details/'+ _type +'/ID.json', function (error, d) {
+        d3.json('./data/details/'+ _type +'/ID.json', function (error, d) {
             var itemsAmount = d.ids.length;
             var cbExecuted = 0;
 
@@ -42,9 +42,11 @@ function loadData(_type) {
 
             d.ids.forEach(function (id, i) {
 
-                d3.json('data/details/' + _type + '/json/' + id + '.json', function (error, d) {
+                d3.json('./data/details/' + _type + '/json/' + id + '.json', function (error, d) {
 
-                    d3.csv('data/details/' + _type + '/csv/'+id+'.csv', function (error, csv) {
+                    d3.csv('./data/details/' + _type + '/csv/'+id+'.csv', function (error, csv) {
+
+                        console.log(id);
 
                         var date_week = csv.map(function (d) {
                             return parseTime(d.date_week);
