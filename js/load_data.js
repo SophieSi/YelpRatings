@@ -43,7 +43,7 @@ function loadData(_type) {
             d.ids.forEach(function (id, i) {
 
                 if (id[0] != "_"){
-                    
+
                     d3.json('./data/details/' + _type + '/json/' + id + '.json', function (error, d) {
 
                     d3.csv('./data/details/' + _type + '/csv/'+id+'.csv', function (error, csv) {
@@ -89,6 +89,10 @@ function loadData(_type) {
 
                     })
                 })
+                }
+
+                else {
+                    console.log(id);
                 }
             });
         })
