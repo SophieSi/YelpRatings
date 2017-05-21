@@ -101,6 +101,7 @@ function createVis(_id,_info ,_data) {
 
 
     addButton.onclick = function () {
+        this.value = "Added";
         CompareInfo.push(_info);
         CompareData.push(_data);
         console.log(CompareInfo);

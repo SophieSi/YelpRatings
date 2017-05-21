@@ -14,7 +14,7 @@ var CompareData = [];
 
 function compare_test(_info, _data) {
 
-
+    document.getElementById("contact").scrollIntoView();
 
     console.log(_info, _data);
 
