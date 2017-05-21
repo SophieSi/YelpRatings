@@ -42,7 +42,10 @@ function loadData(_type) {
 
             d.ids.forEach(function (id, i) {
 
-                if (id[0] != "_"){
+                if (id[0] == "_"){
+
+                    id = "r".concat(id);
+                }
 
                     d3.json('./data/details/' + _type + '/json/' + id + '.json', function (error, d) {
 
@@ -89,11 +92,7 @@ function loadData(_type) {
 
                     })
                 })
-                }
 
-                else {
-                    console.log(id);
-                }
             });
         })
 
