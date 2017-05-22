@@ -16,7 +16,7 @@ Compare = function(_parentElement, _data, _date_extend){
 Compare.prototype.initVis = function() {
     var vis = this; // read about the this
 
-    vis.margin = {top: 10, right: 300, bottom: 30, left: 30},
+    vis.margin = {top: 10, right: 360, bottom: 30, left: 30},
         vis.width = $("#" + vis.parentElement).width()  - vis.margin.left - vis.margin.right,
         vis.height = 400 - vis.margin.top - vis.margin.bottom;
 
@@ -119,7 +119,7 @@ Compare.prototype.initVis = function() {
 
     //append legend
     vis.legend = vis.g.append("g")
-        .attr("transform", "translate(" + 870 + "," + 100 + ")");
+        .attr("transform", "translate(" + 750 + "," + 100 + ")");
 
     vis.legend
         .selectAll("circle")
@@ -130,7 +130,7 @@ Compare.prototype.initVis = function() {
         .attr("cy", function (d,i) {
             return 30 * i
         })
-        .attr("r", 10)
+        .attr("r", 8)
         .attr("fill", function (d, i) {
             return vis.colors[i]
         });
