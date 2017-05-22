@@ -37,6 +37,26 @@ queue()
     .defer(d3.json,"data/top10/em_star_top10_200_jp.json")
     .await(createTrend);
 
+$(document).ready(function () {
+    // $(function () {
+    //     $('[data-toggle="tooltip"]').tooltip()
+    // })
+    // $('#tip1')
+    //     .popover()
+    //     .click(function(e) {
+    //         e.preventDefault();
+    //         $(this).focus();
+    //     });
+
+    $('.popover-dismiss').popover({
+        trigger: 'focus',
+        html: 'true'
+    })
+});
+
+
+
+
 function createTrend(error, _data1, _data2, _data3,_data4,_data5,_data6, _data7, _data8,_data9,_data10) {//customize
     full_data = [_data1, _data2,_data3, _data4, _data5]; //customize
     top10_data = [_data6, _data7, _data8,_data9,_data10]; //top 10 data
@@ -49,6 +69,7 @@ function createTrend(error, _data1, _data2, _data3,_data4,_data5,_data6, _data7,
     var date_max = full_data.map(function (d) {
         return null
     });
+
 
     //initialize scatterplots
     full_data.forEach(function (d,i) {

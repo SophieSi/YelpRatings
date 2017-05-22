@@ -83,6 +83,31 @@
                         <hr class="star-light">
                         <span class="skills">by Xu Si</span>
                     </div>
+
+
+                        <!--<div class="modal show">-->
+                            <!--<div class="modal-dialog" role="document">-->
+                                <!--<div class="modal-content">-->
+                                    <!--<div class="modal-header">-->
+                                        <!--<h5 class="modal-title">Modal title</h5>-->
+                                        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+                                            <!--<span aria-hidden="true">×</span>-->
+                                        <!--</button>-->
+                                    <!--</div>-->
+                                    <!--<div class="modal-body">-->
+                                        <!--<p>Modal body text goes here.</p>-->
+                                    <!--</div>-->
+                                    <!--<div class="modal-footer">-->
+                                        <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                    <!--<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>-->
+
+
                 </div>
             </div>
         </div>
@@ -95,8 +120,29 @@
                 <div class="col-lg-12 text-center">
                     <h2>Types of Restaurants</h2>
                     <hr class="star-primary">
+                    <!--<div id = "tip1" class="modal">-->
+                        <!--<div class="modal-dialog" role="document">-->
+                            <!--<div class="modal-content">-->
+                                <!--<div class="modal-header">-->
+                                    <!--<h5 class="modal-title">Modal title</h5>-->
+                                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+                                        <!--<span aria-hidden="true">&times;</span>-->
+                                    <!--</button>-->
+                                <!--</div>-->
+                                <!--<div class="modal-body">-->
+                                    <!--<p>Modal body text goes here.</p>-->
+                                <!--</div>-->
+                                <!--<div class="modal-footer">-->
+                                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 </div>
             </div>
+
+
 
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -107,7 +153,15 @@
                         <button type="button" class="btn btn-default" aria-label="pause" onclick="stop()">
                             <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
                         </button>
+
                     </div>
+
+                    <button type="button"
+                            class="btn btn-warning popover-dismiss"
+                            data-toggle="popover"
+                            title=""
+                            data-content="Play the animation to see the quality distribution of some types of restaurants and top 10 rankings; <br>Click one of the types below to see next step"
+                            data-original-title="Decide the type">Tips</button>
 
                 </div>
             </div>
@@ -196,9 +250,11 @@
 
                 <div class="col-xs-1 col-md-1 ">
 
+
                 </div>
 
             </div>
+
         </div>
     </section>
 
@@ -222,6 +278,13 @@
                     <div class="row" style="display: -webkit-inline-box">
                         <span class="glyphicon glyphicon-star" aria-hidden="true" style="color: #ffeb3b;"> </span> Top 10
                         <input id = "comp_btn" value = "Compare" class="btn btn-default" onclick="compare_test(CompareInfo, CompareData)"></input>
+                        <button type="button"
+                                class="btn btn-warning popover-dismiss"
+                                data-toggle="popover"
+                                title=""
+                                data-content="Click on the markers to see change of the quality of the restaurant;<br> Zoom and pan to see details;<br> Click add button to include the restaurant for further comparison;<br> Click compare for next step"
+                                data-original-title="Choose interested restaurants">Tips</button>
+
                     </div>
 
                     <div id = "info" class="row">
@@ -254,6 +317,13 @@
                 <div class="col-lg-12 text-center">
                     <h2>Compare Quality of Restaurants</h2>
                     <hr class="star-primary">
+                    <button type="button"
+                            class="btn btn-warning popover-dismiss"
+                            data-toggle="popover"
+                            title=""
+                            data-content="Zoom and pan to see more details"
+                            data-original-title="Comparison and rankings">Tips</button>
+
                 </div>
             </div>
             <div class="row">
@@ -331,11 +401,13 @@
 
 
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <!--<script src="vendor/jquery/jquery.min.js"></script>-->
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
+    <!--<script src="vendor/bootstrap/js/bootstrap.min.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
@@ -347,7 +419,7 @@
     <script src="js/freelancer.min.js"></script>
 
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="js/jquery.min.js"></script>
+
     <script src="js/queue.v1.min.js"></script>
     <script src="js/ScatterPlot.js"></script>
     <script src="js/main_ratings_trend.js"></script>
@@ -357,7 +429,7 @@
 
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
-    <script src="js/jquery.min.js"></script>
+    <!--<script src="js/jquery.min.js"></script>-->
     <script src="js/require.js"></script>
     <script src="js/load_data.js"></script>
     <script src="js/createMap.js"></script>

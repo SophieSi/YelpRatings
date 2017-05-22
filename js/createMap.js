@@ -118,7 +118,7 @@ function createMarker(_info,_data, map, _rank, _colorScale) {
     markers.push(marker);
 
     var infowindow = new google.maps.InfoWindow({
-        content: _info.name + "<br> Click to compare",
+        content: _info.name + "<br> Click to see more",
         color: "black"
     });
 

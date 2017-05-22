@@ -31,6 +31,13 @@ a:hover {
 #info h1, h2, h3, h4, h5, h6 {
     text-transform: none;
 }
+
+.popover-title, .popover-content{
+    color: #2c3e50;
+}
+.modal {
+    height: 200px;
+}
     /* Optional: Makes the sample page fill the window. */
 html, body {
     height: 100%;
