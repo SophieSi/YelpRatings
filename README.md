@@ -1,6 +1,6 @@
-# YelpRatings.github.io
+# YelpRatings
 
-Website link: https://sophiesi.github.io/YelpRatings/
+Web visualization: https://sophiesi.github.io/YelpRatings/
 
 This visualization website is build with D3.js. 
 
